@@ -75,7 +75,7 @@ if __name__ == '__main__':
                [2, 2],
                [9, 7]
                ]
-    x = [8, 6]
+    x = [5, 3]
     kdtree = KdTree()
     kdtree.create(dataSet)
     nearest =  kdtree.search(x)
