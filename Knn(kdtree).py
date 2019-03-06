@@ -64,8 +64,10 @@ class KdTree:
         travel(self.kdTree)
         return nearestPoint
     
-    def dist(self, x1, x2): #欧式距离的计算
-        return ((np.array(x1) - np.array(x2)) ** 2).sum() ** 0.5
+    def dist(self, x1, x2):
+        #欧式距离 ord = 2; 曼哈顿距离 ord = 1
+        distance = np.linalg.norm(np.array(x1) - np.array(x2),ord = 2)
+        return distance
     
 if __name__ == '__main__':
     dataSet = [[0, 1],
